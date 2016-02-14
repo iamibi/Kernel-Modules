@@ -1,0 +1,23 @@
+How to compile the FirstModule.c ?
+
+At the terminal, change your current directory to where the FirstModule.c and Makefile exist
+and then type:
+    make -C /lib/modules/$(uname -r)/build M=$PWD modules
+    
+
+How to insert the module in kernel space ?
+
+Run the following command at the terminal:
+    sudo insmod FirstModule.ko
+    
+To check whether the module is inserted, type:
+    lsmod | grep FirstModule
+or simply
+    lsmod
+    
+How to unload module ?
+    sudo rmmod FirstModule
+    
+To check the status and print log, type:
+    sudo tail -f /var/log/syslog
+and then do the above loading and unloading of module, you'll see the output messages in it.
