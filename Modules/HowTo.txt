@@ -8,7 +8,7 @@ and then type:
 How to insert the module in kernel space ?
 
 Run the following command at the terminal:
-    sudo insmod FirstModule.ko
+    sudo insmod ./FirstModule.ko
     
 To check whether the module is inserted, type:
     lsmod | grep FirstModule
